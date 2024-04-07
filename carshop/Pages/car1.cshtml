@@ -1,0 +1,80 @@
+﻿@page
+@model carshop.Pages.Index1Model
+@{
+}
+<script src="https://kit.fontawesome.com/56eb3b1966.js" crossorigin="anonymous"></script>
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+ <div id="mainContent" class="main-content">
+ <div class="gallery1">
+        <div class="categories">
+            <h5>Інтер'єр</h5>
+            <h5>Екстер'єр</h5>
+            <h5>Кольори</h5>
+        </div>
+        <div class="main-photo-container">
+            <div class="main-photo-wrapper">
+                <img class="main-photo" src="~/lib/pic's/1.png" alt="Основне фото">
+            </div>
+            <button class="nav-btn prev-btn">&lt;</button>
+            <button class="nav-btn next-btn">&gt;</button>
+        </div>
+        <div class="thumbnails">
+            <div class="thumbnail">
+                <img src="~/lib/pic's/1.png" alt="Мініатюра 1">
+            </div>
+            <div class="thumbnail">
+                <img src="~/lib/pic's/2.png" alt="Мініатюра 2">
+            </div>
+            <div class="thumbnail">
+                <img src="~/lib/pic's/3.png" alt="Мініатюра 3">
+            </div>
+            <div class="thumbnail">
+                <img src="~/lib/pic's/4.png" alt="Мініатюра 4">
+            </div>
+            <div class="thumbnail">
+                <img src="~/lib/pic's/5.png" alt="Мініатюра 1">
+            </div>
+            <div class="thumbnail">
+                <img src="~/lib/pic's/5.png" alt="Мініатюра 1">
+            </div>
+        </div>
+    </div>
+ </div>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script>
+        const mainPhoto = document.querySelector('.main-photo');
+        const thumbnails = document.querySelectorAll('.thumbnail img');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+        let currentIndex = 0;
+        
+        function showImage(index) {
+            mainPhoto.src = thumbnails[index].src;
+            thumbnails[currentIndex].classList.add('hidden'); // Приховуємо поточне головне фото в нижньому списку
+            thumbnails[index].classList.remove('hidden'); // Показуємо нове головне фото в нижньому списку
+        }
+        
+        function prevImage() {
+            currentIndex = (currentIndex === 0) ? thumbnails.length - 1 : currentIndex - 1;
+            showImage(currentIndex);
+        }
+        
+        function nextImage() {
+            currentIndex = (currentIndex === thumbnails.length - 1) ? 0 : currentIndex + 1;
+            showImage(currentIndex);
+        }
+        
+        prevBtn.addEventListener('click', prevImage);
+        nextBtn.addEventListener('click', nextImage);
+    </script>
+</body>
+</html>

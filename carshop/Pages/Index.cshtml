@@ -1,0 +1,117 @@
+﻿@page
+@model IndexModel
+<script src="https://kit.fontawesome.com/56eb3b1966.js" crossorigin="anonymous"></script>
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<div id="mainContent" class="main-content">
+<div class="slider middle">
+    <input type="radio" name="r" id="r1" checked>
+    <input type="radio" name="r" id="r2">
+    <input type="radio" name="r" id="r3">
+    <input type="radio" name="r" id="r4">
+    <div class="slides">
+        <div class="slide"><img src="~/lib/pic's/img1.png" alt=""></div>
+        <div class="slide"><img src="~/lib/pic's/img2.png" alt=""></div>
+        <div class="slide"><img src="~/lib/pic's/img3.png" alt=""></div>
+        <div class="slide"><img src="~/lib/pic's/img4.png" alt=""></div>
+    </div>
+    <div class="navigation">
+        <label for="r1" class="bar"></label>
+        <label for="r2" class="bar"></label>
+        <label for="r3" class="bar"></label>
+        <label for="r4" class="bar"></label>
+    </div>
+</div>
+
+        <div class="avalible_car">
+            <h1><b>Авто в наявності</b></h1>
+        </div>
+
+        <div class="car_type">
+            <div class="car_section" id="section1">Кросовер</div>
+            <div class="car_section" id="section2">Пікап</div>
+            <div class="car_section" id="section3">Комерційні авто</div>
+        </div>
+
+        <div class="gallery">
+
+            <div class="content">
+                <a href="https://localhost:7277/car1">
+                    <img src="~/lib/pic's/Puma.png">
+                    <p>Puma</p>
+                </a>
+                <h3>від 971 257 грн*</h3>
+                <a href="#"><h4>Докладніше</h4></a>
+            </div>
+
+            <div class="content">
+                <a href="#">
+                    <img src="~/lib/pic's/FOCUS.png">
+                    <p>Focus</p>
+                </a>
+                <h3>від 1 158 682 грн*</h3>
+                <a href="#"><h4>Докладніше</h4></a>
+            </div>
+
+            <div class="content">
+                <a href="#">
+                    <img src="~/lib/pic's/Mach-e.png">
+                    <p>Mach-e</p>
+                </a>
+                <h3>від 2 009 499 грн*</h3>
+                <a href="#"><h4>Докладніше</h4></a>
+            </div>
+
+        </div>
+
+        <div class="banner">
+            <img src="~/lib/pic's/banner.png">
+            <h1>Новий Mach-e </h1>
+            <h2>Доступний до замовлення</h2>
+            <button class="pill" type="button">Дізнатись більше</button>
+        </div>
+        <div class="lower-menu">
+    <div class="upper-rounded-bar"></div>
+    <div class="auto">
+        <h3>Авто</h3>
+        <h4>Перевірити наявні авто в Україні</h4>
+        <h4>Ціни та комплектації</h4>
+        <h4>Знайти дилера в вашому регіоні</h4>
+        <h4>Зворотній зв'язок</h4>
+    </div>
+
+    <div class="corp-client">
+        <h3>Корпоративним клієнтам</h3>
+        <h4>Наші переваги</h4>
+        <h4>Рішення для бізнесу</h4>
+    </div>
+
+    <div class="service">
+        <h3>Сервіс</h3>
+        <h4>Економ Сервіс для європейських авто</h4>
+        <h4>Економ Сервіс для американських авто</h4>
+        <h4>Калькулятор ТО</h4>
+        <h4>Інструкції з експлуатації</h4>
+    </div>
+
+    <div class="finance">
+        <h3>Фінансові послуги</h3>
+        <h4>Кредитування</h4>
+        <h4>Лізинг</h4>
+    </div>
+    <div class="lower-rounded-bar"></div>
+</div>
+
+</div>
+</body>
+</html>
